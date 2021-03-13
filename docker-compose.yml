@@ -1,0 +1,13 @@
+version: "2.4"
+
+services:
+  splatnet2statink:
+    image: splatnet2statink:latest
+    build:
+      context: .
+      network: host
+    volumes:
+       - ./:/app
+    restart: "no"
+    user: root
+    network_mode: host
